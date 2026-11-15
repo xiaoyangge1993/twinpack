@@ -660,6 +660,7 @@
     const pro = isPro();
     const effectiveTemplate = state.template || "classic";
     app.innerHTML = `
+      <div class="app-shell">
       <header class="app-header">
         <a class="brand" href="./">
           <img src="assets/logo.svg" alt="Twinpack" />
@@ -716,6 +717,7 @@
         </main>
       </div>
       ${siteFooter()}
+      </div>
       ${modalHtml()}
     `;
     bind();
