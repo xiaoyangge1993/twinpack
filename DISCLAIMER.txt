@@ -1,0 +1,11 @@
+Twinpack 生成的是商业发票和装箱单（commercial invoice / packing list）草稿。
+它不是报关单、报关委托，也不是中国增值税发票或任何税务机关出具或认可的发票。
+本工具不计算应纳税额或关税，不对 HS 编码做归类，不构成法律、税务或海关合规建议。
+贸易术语、原产国、港口、重量、体积和编码均由使用者自行填写，仅用于展示。
+所有单据数据只保存在使用者的浏览器中，不会上传到服务器。
+
+Twinpack produces commercial invoice and packing list drafts.
+It is not a customs declaration, not a China VAT invoice, and is not issued or endorsed by any tax or customs authority.
+It does not calculate tax or duty, does not classify HS codes, and does not constitute legal, tax, or customs-compliance advice.
+Incoterms, origin, ports, weights, volume, and codes are entered by the user and shown for document purposes only.
+Document data stays in the user's browser and is not uploaded to a server.
