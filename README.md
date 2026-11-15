@@ -28,7 +28,7 @@ python3 -m http.server 4174
 | 模板 | 经典；现代 / 极简可预览，导出仍带水印 | 经典 / 现代 / 极简，导出无水印 |
 | 批量导出草稿 | 锁定 | 可用 |
 
-Pro 商品尚未上架，购买入口显示「即将上线」。工具接受以 `TF1_` 开头的签名许可证（与 Twinform 同一把公钥）。Gumroad 校验会在商品上架并填入 `product_id` 后启用。
+Pro 商品尚未上架，购买入口显示「即将上线」。工具只接受以 `TP1_` 开头、载荷含 Twinpack 产品标识的签名许可证（与 Twinform 同一把公钥，但 Twinform 的 `TF1_` 码不能在这里激活）。Gumroad 校验会在商品上架并填入 `product_id` 后启用。
 
 ## 从 Twinform 导入
 

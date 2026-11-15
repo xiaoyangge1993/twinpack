@@ -120,18 +120,18 @@
       bankAddr: "开户行地址",
       payExtra: "其他付款说明",
       proTitle: "Pro 功能",
-      proHint: "Pro 商品即将上架。有效的 TF1_ 签名许可证可去掉水印并解锁批量导出。现代 / 极简模板可随时预览，未激活时导出仍带水印。",
+      proHint: "Pro 商品即将上架。有效的 TP1_ 签名许可证可去掉水印并解锁批量导出。现代 / 极简模板可随时预览，未激活时导出仍带水印。Twinform 的 TF1_ 码不能在这里激活。",
       licenseLabel: "许可证",
-      licensePlaceholder: "粘贴以 TF1_ 开头的签名码（空格和换行会被忽略）",
+      licensePlaceholder: "粘贴以 TP1_ 开头的 Twinpack 签名码（空格和换行会被忽略）",
       licenseActivate: "激活",
       licenseActivated: "许可证已在本机激活。去水印和批量导出已解锁。",
       licenseClear: "移除本机许可证",
-      licenseInvalid: "这不是有效的许可证。请检查是否完整粘贴。",
+      licenseInvalid: "这不是有效的 Twinpack 许可证。请检查是否完整粘贴，或确认不是 Twinform 的 TF1_ 码。",
       licenseEmpty: "请先粘贴许可证。",
       licenseBusy: "正在校验…",
       licenseNetwork: "暂时无法校验购买许可证，请检查网络后重试。",
       licenseRevoked: "这份许可证已退款或发生争议，无法激活。",
-      licenseSoon: "付费商品尚未上架，目前不能校验购买平台的 key。若你持有已签发的 TF1_ 码，可以在这里激活。",
+      licenseSoon: "付费商品尚未上架，目前不能校验购买平台的 key。若你持有已签发的 Twinpack TP1_ 码，可以在这里激活。",
       buyCta: "购买 Pro · 即将上线",
       buyHelp: "购买说明",
       template: "模板",
@@ -233,18 +233,18 @@
       bankAddr: "Bank address",
       payExtra: "Other payment notes",
       proTitle: "Pro features",
-      proHint: "The Pro listing is not on sale yet. A signed TF1_ license removes the watermark and unlocks batch export. Modern and Minimal templates can be previewed anytime; exports stay watermarked until a license is activated.",
+      proHint: "The Pro listing is not on sale yet. A signed TP1_ Twinpack license removes the watermark and unlocks batch export. Modern and Minimal templates can be previewed anytime; exports stay watermarked until a license is activated. A Twinform TF1_ code will not unlock this tool.",
       licenseLabel: "License",
-      licensePlaceholder: "Paste a signed code that starts with TF1_ (spaces and line breaks are ignored)",
+      licensePlaceholder: "Paste a signed Twinpack code that starts with TP1_ (spaces and line breaks are ignored)",
       licenseActivate: "Activate",
       licenseActivated: "A license is active in this browser. The watermark is off and batch export is unlocked.",
       licenseClear: "Remove license from this browser",
-      licenseInvalid: "That is not a valid license. Paste the full code, or wait until the paid listing is available.",
+      licenseInvalid: "That is not a valid Twinpack license. Paste the full TP1_ code — a Twinform TF1_ code will not work here.",
       licenseEmpty: "Paste a license first.",
       licenseBusy: "Checking…",
       licenseNetwork: "Could not reach the license server. Check your connection and try again.",
       licenseRevoked: "This license has been refunded or disputed and cannot be activated.",
-      licenseSoon: "The paid product is not listed yet, so store license keys cannot be checked. A signed TF1_ code can still be activated here.",
+      licenseSoon: "The paid product is not listed yet, so store license keys cannot be checked. A signed Twinpack TP1_ code can still be activated here.",
       buyCta: "Buy Pro · Coming soon",
       buyHelp: "How it works",
       template: "Template",
@@ -906,6 +906,7 @@
                  ${licenseNotice === "revoked" ? `<p class="license-status err">${t("licenseRevoked")}</p>` : ""}
                  ${licenseNotice === "network" ? `<p class="license-status err">${t("licenseNetwork")}</p>` : ""}
                  ${licenseNotice === "unavailable" ? `<p class="license-status err">${t("licenseSoon")}</p>` : ""}
+                 ${licenseNotice === "product" ? `<p class="license-status err">${t("licenseInvalid")}</p>` : ""}
                  ${licenseNotice === "empty" ? `<p class="license-status err">${t("licenseEmpty")}</p>` : ""}
                  ${licenseNotice === "busy" ? `<p class="license-status">${t("licenseBusy")}</p>` : ""}`
           }
@@ -1693,7 +1694,9 @@
           ? "network"
           : result && result.reason === "unavailable"
             ? "unavailable"
-            : "invalid";
+            : result && result.reason === "product"
+              ? "product"
+              : "invalid";
     return false;
   }
 
