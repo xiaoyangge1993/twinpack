@@ -196,7 +196,7 @@ label.lbl input:focus, label.lbl select:focus, label.lbl textarea:focus {
   min-height: 297mm;
   background: #fff;
   color: #1c1917;
-  padding: 12mm 14mm 12mm;
+  padding: 11mm 14mm 10mm;
   position: relative;
   box-shadow: var(--shadow);
   overflow: visible;
@@ -224,7 +224,7 @@ label.lbl input:focus, label.lbl select:focus, label.lbl textarea:focus {
 .sheet-title .sub { margin-top: 3px; font-size: 8pt; color: #6b6560; }
 .sheet-meta { margin-top: 3mm; text-align: right; font-size: 9pt; color: #444; line-height: 1.55; }
 
-.parties { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin: 4mm 0 4mm; }
+.parties { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin: 3.5mm 0 3mm; }
 .party .k { font-size: 8pt; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6560; margin-bottom: 2mm; }
 .party .name { font-weight: 700; font-size: 11pt; }
 .party .en { color: #5c5854; font-size: 9pt; font-weight: 400; }
@@ -239,16 +239,16 @@ label.lbl input:focus, label.lbl select:focus, label.lbl textarea:focus {
 .sheet td.num, .sheet th.num { text-align: right; white-space: nowrap; }
 .item-en { display: block; color: #6b6560; font-size: 8pt; margin-top: 0.6mm; }
 
-.totals { margin-top: 3mm; margin-left: auto; width: 78mm; font-size: 9pt; }
+.totals { margin-top: 2mm; margin-left: auto; width: 78mm; font-size: 9pt; }
 .totals .row { display: flex; justify-content: space-between; gap: 6mm; padding: 1.2mm 0; }
 .totals .row.grand { border-top: 0.4mm solid #1c1917; font-weight: 700; font-size: 11pt; margin-top: 1mm; padding-top: 2mm; }
 
-.pay { margin-top: 3.5mm; display: grid; grid-template-columns: 1.2fr 1fr; gap: 8mm; }
+.pay { margin-top: 3mm; display: grid; grid-template-columns: 1.2fr 1fr; gap: 8mm; }
 .pay h3, .notes h3 { margin: 0 0 2mm; font-size: 8pt; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6560; font-weight: 700; }
 .pay p, .notes p { margin: 0; font-size: 9pt; line-height: 1.5; white-space: pre-wrap; }
 
 .sheet-disc {
-  margin-top: 3.5mm; padding-top: 2mm; border-top: 0.15mm solid #d7d1c7;
+  margin-top: 2.5mm; padding-top: 1.6mm; border-top: 0.15mm solid #d7d1c7;
   font-size: 6.4pt; color: #6b6560; line-height: 1.35;
 }
 
