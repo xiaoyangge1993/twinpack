@@ -14,8 +14,8 @@
   };
 
   const DISCLAIMER = {
-    zh: "本文件为商业发票或装箱单草稿，不是报关单，不是增值税发票，也不构成法律、税务或海关合规建议。字段由使用者自行填写，须自行与货代或报关行核对。数据只保存在本机浏览器。",
-    en: "This is a commercial invoice or packing list draft. It is not a customs declaration or tax invoice, and is not legal, tax, or customs advice. Values are entered by the user and should be confirmed with a forwarder or broker. Data stays in this browser.",
+    zh: "本文件为商业发票或装箱单草稿，不是报关单或增值税发票，也不构成法律、税务或海关合规建议。字段由使用者自行填写并须自行核对。数据只保存在本机浏览器。",
+    en: "This is a commercial invoice or packing list draft — not a customs form or tax invoice, and not legal, tax, or customs advice. Values are entered by the user. Data stays in this browser.",
   };
 
   const CURRENCIES = {
@@ -395,7 +395,7 @@
       destination: "Seattle, USA",
       vessel: "",
       marks: "HARBOR / SEATTLE / C/NO. 1-70 / MADE IN CHINA\n(fictional example / 虚构示例)",
-      payTerms: "40% deposit against this invoice; balance before shipment. 定金 40%，余款发货前付清。（虚构示例）",
+      payTerms: "40% deposit; balance before shipment. 定金 40%，余款发货前付清。（示例）",
     };
     s.items = [
       {
@@ -433,18 +433,18 @@
     ];
     s.payment = {
       paypal: true,
-      wise: true,
+      wise: false,
       payoneer: false,
       bank: true,
-      paypalEmail: "payments@northwood.example  （示例）",
-      wiseId: "northwood@example.com  （示例）",
+      paypalEmail: "payments@northwood.example (example)",
+      wiseId: "",
       payoneerId: "",
-      bankName: "Example Bank (fictional / 虚构示例)",
+      bankName: "Example Bank (fictional)",
       accountName: "Northwood Studio",
       accountNo: "0000 0000 0000",
       swift: "EXAMPLED",
       bankAddr: "Chengdu, China",
-      extra: "Please use CI-2026-018 as the payment reference.\n请在汇款备注中填写本商业发票号。以上收款信息均为虚构示例。",
+      extra: "Use CI-2026-018 as the payment reference. 请在汇款备注中填写本发票号。（虚构示例）",
     };
     s.notes =
       "货物与数量为虚构示例，仅用于演示版式。\nFigures in this example are fictional and for layout only.";
