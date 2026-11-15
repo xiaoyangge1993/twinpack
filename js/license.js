@@ -1,7 +1,7 @@
 /* Twinpack license verification. The public key is safe to publish.
    Private signing keys must never be shipped with the site.
    Twinpack accepts only TP1_ codes whose payload includes the Twinpack product tag.
-   Twinform TF1_ codes must be rejected here. Gumroad product_id is empty until a listing exists. */
+   Twinform TF1_ codes must be rejected here. Gumroad keys are checked against the Twinpack Pro listing. */
 const PUBLIC_KEY_HEX = "ba5503b2bb506e850709a1654ad3a60848e339ed86818de10b179f2969b264d0";
 
 const PREFIX = "TP1_";
@@ -9,8 +9,8 @@ const VERSION = 2;
 const PRODUCT_TAG = "TPK1";
 const PAYLOAD_LEN = 12;
 const TOTAL_LEN = 76;
-const GUMROAD_PRODUCT_ID = "";
-const GUMROAD_URL = "";
+const GUMROAD_PRODUCT_ID = "5rRkbx-4Hu1frbed8VEt8g==";
+const GUMROAD_URL = "https://xiaoxiaoyang.gumroad.com/l/cjxupc";
 const GUMROAD_VERIFY_URL = "https://api.gumroad.com/v2/licenses/verify";
 
 function normalizeLicense(code) {

@@ -120,9 +120,9 @@
       bankAddr: "开户行地址",
       payExtra: "其他付款说明",
       proTitle: "Pro 功能",
-      proHint: "Pro 商品即将上架。有效的 TP1_ 签名许可证可去掉水印并解锁批量导出。现代 / 极简模板可随时预览，未激活时导出仍带水印。Twinform 的 TF1_ 码不能在这里激活。",
+      proHint: "有效许可证可去掉水印并解锁批量导出。可粘贴 Gumroad 付款后收到的 license key，或以 TP1_ 开头的签名码。现代 / 极简模板可随时预览，未激活时导出仍带水印。购买入口指向 Gumroad；面包多即将上线。Twinform 的 TF1_ 码不能在这里激活。",
       licenseLabel: "许可证",
-      licensePlaceholder: "粘贴以 TP1_ 开头的 Twinpack 签名码（空格和换行会被忽略）",
+      licensePlaceholder: "粘贴 Gumroad license key，或以 TP1_ 开头的签名码（空格和换行会被忽略）",
       licenseActivate: "激活",
       licenseActivated: "许可证已在本机激活。去水印和批量导出已解锁。",
       licenseClear: "移除本机许可证",
@@ -131,8 +131,8 @@
       licenseBusy: "正在校验…",
       licenseNetwork: "暂时无法校验购买许可证，请检查网络后重试。",
       licenseRevoked: "这份许可证已退款或发生争议，无法激活。",
-      licenseSoon: "付费商品尚未上架，目前不能校验购买平台的 key。若你持有已签发的 Twinpack TP1_ 码，可以在这里激活。",
-      buyCta: "购买 Pro · 即将上线",
+      licenseSoon: "暂时无法校验购买许可证。若你持有已签发的 Twinpack TP1_ 码，可以在这里激活。",
+      buyCta: "购买 Pro · $12",
       buyHelp: "购买说明",
       template: "模板",
       locked: "可预览",
@@ -233,9 +233,9 @@
       bankAddr: "Bank address",
       payExtra: "Other payment notes",
       proTitle: "Pro features",
-      proHint: "The Pro listing is not on sale yet. A signed TP1_ Twinpack license removes the watermark and unlocks batch export. Modern and Minimal templates can be previewed anytime; exports stay watermarked until a license is activated. A Twinform TF1_ code will not unlock this tool.",
+      proHint: "A valid license removes the watermark and unlocks batch export. Paste the Gumroad license key from your receipt, or a signed code that starts with TP1_. Modern and Minimal templates can be previewed anytime; exports stay watermarked until a license is activated. The purchase button goes to Gumroad. 面包多 is coming soon. A Twinform TF1_ code will not unlock this tool.",
       licenseLabel: "License",
-      licensePlaceholder: "Paste a signed Twinpack code that starts with TP1_ (spaces and line breaks are ignored)",
+      licensePlaceholder: "Paste a Gumroad license key, or a signed code that starts with TP1_ (spaces and line breaks are ignored)",
       licenseActivate: "Activate",
       licenseActivated: "A license is active in this browser. The watermark is off and batch export is unlocked.",
       licenseClear: "Remove license from this browser",
@@ -244,8 +244,8 @@
       licenseBusy: "Checking…",
       licenseNetwork: "Could not reach the license server. Check your connection and try again.",
       licenseRevoked: "This license has been refunded or disputed and cannot be activated.",
-      licenseSoon: "The paid product is not listed yet, so store license keys cannot be checked. A signed Twinpack TP1_ code can still be activated here.",
-      buyCta: "Buy Pro · Coming soon",
+      licenseSoon: "Store license keys could not be checked right now. A signed Twinpack TP1_ code can still be activated here.",
+      buyCta: "Buy Pro · $12",
       buyHelp: "How it works",
       template: "Template",
       locked: "Preview",
@@ -922,7 +922,7 @@
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
           <button class="btn" data-action="batch" ${pro ? "" : "disabled"}>${t("batch")}</button>
-          <a class="btn-soon" href="purchase.html">${t("buyCta")}</a>
+          <a class="btn-pro" href="${escapeHtml((window.TwinpackLicense && TwinpackLicense.GUMROAD_URL) || "https://xiaoxiaoyang.gumroad.com/l/cjxupc")}" target="_blank" rel="noopener noreferrer">${t("buyCta")}</a>
           <a class="btn btn-ghost" href="purchase.html">${t("buyHelp")}</a>
         </div>
         <p class="hint">${t("batchHint")}</p>
